@@ -1,4 +1,4 @@
-export interface IEsper {
+export interface Esper {
   name: string;
   deity: string;
   element: "inferno" | "flow" | "wind" | "shimmer";

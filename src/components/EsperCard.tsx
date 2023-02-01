@@ -1,14 +1,18 @@
 import Image from "next/image";
 
-import type { IEsper } from "../types";
+import type { Esper } from "../utils/types";
 
 interface Props {
-  esper: IEsper;
+  esper: Esper;
+  handleClick: () => void;
 }
 
-const Esper = ({ esper }: Props) => {
+const EsperCard = ({ esper, handleClick }: Props) => {
   return (
-    <div className="flex -skew-x-6 flex-col gap-4 rounded-xl border-2 border-green-400 bg-white/10 p-4 text-white hover:cursor-pointer">
+    <div
+      className="flex -skew-x-6 flex-col gap-4 rounded-xl border border-violet-400 bg-white/10 p-4 text-white hover:cursor-pointer"
+      onClick={handleClick}
+    >
       <div className="skew-x-6">
         <div className="flex gap-2">
           <div className="shrink-0 grow-0">
@@ -69,4 +73,4 @@ const Esper = ({ esper }: Props) => {
   );
 };
 
-export default Esper;
+export default EsperCard;

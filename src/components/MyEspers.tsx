@@ -1,15 +1,18 @@
 import { IconStarFilled } from "@tabler/icons-react";
 import Image from "next/image";
 
-import type { IEsper } from "../types";
-import Esper from "./Esper";
+import { useMyEspersStore } from "../utils/store";
+import type { Esper } from "../utils/types";
+import EsperCard from "./EsperCard";
 
 interface Props {
-  espers: IEsper[];
-  available: string[];
+  espers: Esper[];
 }
 
-const MyEspers = ({ espers, available }: Props) => {
+const MyEspers = ({ espers }: Props) => {
+  const myEspers = useMyEspersStore((state) => state.myEspers);
+  const removeEsper = useMyEspersStore((state) => state.removeEsper);
+
   return (
     <div className="self-start">
       <div className="mb-4 font-raleway text-3xl">My Espers</div>
@@ -88,9 +91,15 @@ const MyEspers = ({ espers, available }: Props) => {
       </div>
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-4 2xl:grid-cols-6">
         {espers
-          .filter((esper) => available.includes(esper.name))
+          .filter((esper) => myEspers.includes(esper.name))
           .map((esper) => (
-            <Esper key={esper.name} esper={esper} />
+            <EsperCard
+              key={esper.name}
+              esper={esper}
+              handleClick={() => {
+                removeEsper(esper.name);
+              }}
+            />
           ))}
       </div>
     </div>
