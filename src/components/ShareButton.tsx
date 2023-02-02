@@ -6,11 +6,10 @@ import { encode } from "../utils/lib";
 import type { Esper } from "../utils/types";
 
 interface Props {
-  shareable?: boolean;
   espers: Esper[];
 }
 
-const ShareButton = ({ shareable, espers }: Props) => {
+const ShareButton = ({ espers }: Props) => {
   const [_value, copy] = useCopyToClipboard();
 
   const [showCopied, setShowCopied] = useState(false);
@@ -33,7 +32,7 @@ const ShareButton = ({ shareable, espers }: Props) => {
 
   return (
     <>
-      {shareable && espers.length > 0 && (
+      {espers.length > 0 && (
         <span
           className="flex cursor-pointer items-center justify-center rounded-full bg-sky-500 px-2 py-2 hover:bg-sky-600"
           onClick={handleCopy}

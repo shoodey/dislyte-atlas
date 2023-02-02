@@ -1,6 +1,6 @@
 import { useEsperStore } from "../utils/store";
 import EsperCard from "./EsperCard";
-import Filters from "./Filters";
+import Filters from "./filters/Filters";
 import ShareButton from "./ShareButton";
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
   shareable?: boolean;
 }
 
-const MyEspers = ({ label = "My Espers", shareable = true }: Props) => {
+const MyEspers = ({ label = "My Espers" }: Props) => {
   const espers = useEsperStore((state) => state.espers);
   const removeEsper = useEsperStore((state) => state.removeEsper);
 
@@ -16,11 +16,11 @@ const MyEspers = ({ label = "My Espers", shareable = true }: Props) => {
     <div className="w-full self-start">
       <div className="mb-4 flex select-none items-center gap-2 font-raleway text-3xl">
         {label}
-        <ShareButton shareable={shareable} espers={espers} />
+        <ShareButton espers={espers} />
       </div>
       <Filters />
       {espers.length === 0 && (
-        <div className="text-base text-slate-400">
+        <div className="select-none text-base text-slate-400">
           Start by adding Espers from the top list...
         </div>
       )}

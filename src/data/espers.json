@@ -4,251 +4,287 @@
     "name": "Donar",
     "deity": "Thor",
     "element": "flow",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "defender"
   },
   {
     "id": 2,
     "name": "Jin Yuyao",
     "deity": "Queen Mother",
     "element": "inferno",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "support"
   },
   {
     "id": 3,
     "name": "Tiye",
     "deity": "Nut",
     "element": "flow",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "controller"
   },
   {
     "id": 4,
     "name": "Yun Chuan",
     "deity": "Yang Jian",
     "element": "wind",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 5,
     "name": "Lewis",
     "deity": "Ares",
     "element": "inferno",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 6,
     "name": "Tang Xuan",
     "deity": "Sun Wukong",
     "element": "inferno",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 7,
     "name": "Raven",
     "deity": "Odin",
     "element": "shimmer",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 8,
     "name": "Narmer",
     "deity": "Ra",
     "element": "inferno",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 9,
     "name": "Li Ling",
     "deity": "Nezha",
     "element": "inferno",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 10,
     "name": "Triki",
     "deity": "Loki",
     "element": "wind",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "controller"
   },
   {
     "id": 11,
     "name": "Hyde",
     "deity": "Hades",
     "element": "wind",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 12,
     "name": "Gaius",
     "deity": "Zeus",
     "element": "flow",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 13,
     "name": "Biondina",
     "deity": "Poseidon",
     "element": "flow",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 14,
     "name": "Gabrielle",
     "deity": "Njord",
     "element": "wind",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "support"
   },
   {
     "id": 15,
     "name": "Sally",
     "deity": "Sif",
     "element": "flow",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "support"
   },
   {
     "id": 16,
     "name": "Ollie",
     "deity": "Osiris",
     "element": "flow",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 17,
     "name": "Unas",
     "deity": "Shu",
     "element": "shimmer",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "support"
   },
   {
     "id": 18,
     "name": "Lucas",
     "deity": "Apollo",
     "element": "inferno",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "controller"
   },
   {
     "id": 19,
     "name": "Feng Nuxi",
     "deity": "Nuwa",
     "element": "shimmer",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "controller"
   },
   {
     "id": 20,
     "name": "Clara",
     "deity": "Hera",
     "element": "inferno",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "support"
   },
   {
     "id": 21,
     "name": "Cecilia",
     "deity": "Isis",
     "element": "shimmer",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "support"
   },
   {
     "id": 22,
     "name": "Sienna",
     "deity": "Gaia",
     "element": "wind",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "support"
   },
   {
     "id": 23,
     "name": "Tevor",
     "deity": "Sphinx",
     "element": "shimmer",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 24,
     "name": "Ahmed",
     "deity": "Geb",
     "element": "wind",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "support"
   },
   {
     "id": 25,
     "name": "Jiang Jiuli",
     "deity": "Chiyou",
     "element": "shimmer",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 26,
     "name": "Zora",
     "deity": "Amunet",
     "element": "flow",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 27,
     "name": "Elliot",
     "deity": "Thoth",
     "element": "inferno",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 28,
     "name": "Brewster",
     "deity": "Garmr",
     "element": "inferno",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 29,
     "name": "Abigail",
     "deity": "Frigga",
     "element": "inferno",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "support"
   },
   {
     "id": 30,
     "name": "Everett",
     "deity": "Tyr",
     "element": "shimmer",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 31,
     "name": "Ophelia",
     "deity": "Thanatos",
     "element": "wind",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 32,
     "name": "Ashley",
     "deity": "Heimdall",
     "element": "wind",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 33,
     "name": "Ife",
     "deity": "Meretseger",
     "element": "inferno",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 34,
     "name": "Fatum Sisters",
     "deity": "Nornir",
     "element": "flow",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "support"
   },
   {
     "id": 35,
     "name": "Intisar",
     "deity": "Kauket",
     "element": "flow",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "fighter"
   },
   {
     "id": 36,
     "name": "Cang Ji",
     "deity": "Cang Jie",
     "element": "inferno",
-    "rarity": "legendary"
+    "rarety": "legendary",
+    "role": "support"
   }
 ]
