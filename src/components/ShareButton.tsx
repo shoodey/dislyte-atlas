@@ -3,10 +3,11 @@ import { useState } from "react";
 
 import useCopyToClipboard from "../hooks/useCopy";
 import { encode } from "../utils/lib";
+import type { Esper } from "../utils/types";
 
 interface Props {
   shareable?: boolean;
-  espers: string[];
+  espers: Esper[];
 }
 
 const ShareButton = ({ shareable, espers }: Props) => {
@@ -14,22 +15,28 @@ const ShareButton = ({ shareable, espers }: Props) => {
 
   const [showCopied, setShowCopied] = useState(false);
 
+  const handleCopy = () => {
+    const protocol = window.location.protocol;
+    const host = window.location.host;
+    const basePath = protocol + "//" + host;
+
+    const esperNames = espers.map((esper) => esper.name).join(",");
+    const encoding = encode(esperNames);
+
+    void copy(basePath + "/profile/" + encoding);
+
+    setShowCopied(true);
+    setTimeout(() => {
+      setShowCopied(false);
+    }, 2000);
+  };
+
   return (
     <>
       {shareable && espers.length > 0 && (
         <span
           className="flex cursor-pointer items-center justify-center rounded-full bg-sky-500 px-2 py-2 hover:bg-sky-600"
-          onClick={() => {
-            const protocol = window.location.protocol;
-            const host = window.location.host;
-            const basePath = protocol + "//" + host;
-            const encoding = encode(espers.join(","));
-            void copy(basePath + "/profile/" + encoding);
-            setShowCopied(true);
-            setTimeout(() => {
-              setShowCopied(false);
-            }, 2000);
-          }}
+          onClick={handleCopy}
         >
           <IconShare className="inline" size={24} />
         </span>

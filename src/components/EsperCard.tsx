@@ -1,11 +1,10 @@
 import Image from "next/image";
-import { useRouter } from "next/router";
 
 import type { Esper } from "../utils/types";
 
 interface Props {
   esper: Esper;
-  handleClick: () => void;
+  handleClick?: () => void;
 }
 
 const EsperElement = ({ esper }: { esper: Esper }) => {
@@ -48,12 +47,10 @@ const EsperElement = ({ esper }: { esper: Esper }) => {
 };
 
 const EsperCard = ({ esper, handleClick }: Props) => {
-  const router = useRouter();
-
   return (
     <div
       onClick={() => {
-        if (router.pathname === "/profile") {
+        if (handleClick) {
           handleClick();
         }
       }}

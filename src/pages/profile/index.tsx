@@ -1,16 +1,19 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
 import Espers from "../../components/Espers";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Logo from "../../components/Logo";
 import MyEspers from "../../components/MyEspers";
-import espersData from "../../data/espers.json";
-import type { Esper } from "../../utils/types";
 
 const ProfilePage: NextPage = () => {
-  const espers = espersData as Esper[];
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
 
   return (
     <>
@@ -23,8 +26,12 @@ const ProfilePage: NextPage = () => {
         <Header />
         <div className="container mx-auto mb-32 flex min-h-[calc(100vh-92px)] flex-col items-center gap-12 p-10">
           <Logo />
-          <Espers espers={espers} />
-          <MyEspers espers={espers} />
+          {hydrated && (
+            <>
+              <Espers />
+              <MyEspers />
+            </>
+          )}
         </div>
         <Footer />
       </div>
