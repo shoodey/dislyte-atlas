@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="fixed top-0 flex w-screen justify-end p-4">
+    <div className="absolute top-5 flex w-screen justify-end p-4">
       <Link
         href="https://github.com/shoodey/dislyte-atlas"
         target="_blank"
