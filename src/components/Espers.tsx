@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { useMemo } from "react";
 
 import espersData from "../data/espers.json";
@@ -41,17 +42,22 @@ const Espers = () => {
           No Espers match your filters...
         </div>
       )}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4 2xl:grid-cols-6">
-        {selectableEspers.map((esper) => (
-          <EsperCard
-            key={esper.name}
-            esper={esper}
-            handleClick={() => {
-              addEsper(esper);
-            }}
-          />
-        ))}
-      </div>
+      <motion.div
+        layout
+        className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4 2xl:grid-cols-6"
+      >
+        <AnimatePresence>
+          {selectableEspers.map((esper) => (
+            <EsperCard
+              key={esper.name}
+              esper={esper}
+              handleClick={() => {
+                addEsper(esper);
+              }}
+            />
+          ))}
+        </AnimatePresence>
+      </motion.div>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+import { AnimatePresence, motion } from "framer-motion";
+
 import { useEsperStore } from "../utils/store";
 import EsperCard from "./EsperCard";
 import Filters from "./filters/Filters";
@@ -24,17 +26,22 @@ const MyEspers = ({ label = "My Espers" }: Props) => {
           Start by adding Espers from the top list...
         </div>
       )}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4 xl:grid-cols-6">
-        {espers.map((esper) => (
-          <EsperCard
-            key={esper.name}
-            esper={esper}
-            handleClick={() => {
-              removeEsper(esper);
-            }}
-          />
-        ))}
-      </div>
+      <motion.div
+        layout
+        className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:grid-cols-4 2xl:grid-cols-6"
+      >
+        <AnimatePresence>
+          {espers.map((esper) => (
+            <EsperCard
+              key={esper.name}
+              esper={esper}
+              handleClick={() => {
+                removeEsper(esper);
+              }}
+            />
+          ))}
+        </AnimatePresence>
+      </motion.div>
     </div>
   );
 };
